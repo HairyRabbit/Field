@@ -1,0 +1,47 @@
+///
+/// Field Styles.
+///
+
+
+@require "styles/reset"
+@require "styles/util"
+
+
+/// Vars.
+json('manifest.json')
+
+// public.
+$field-lh   = field-line-height
+$field-fz   = field-font-size
+$field-bdrz = field-border-radius
+$field-bdc  = field-border-color
+$field-pc   = field-color //#673ab7 //#57c5f7
+$area-col   = area-min-col
+
+// disabled.
+$field-bgc-disabled = #eee
+$field-cc-disabled  = #bbb
+
+// dark theme.
+$field-bgc-dark = #2a2a2a
+$field-cc-dark  = #AFAFAF
+
+
+/// Field preset
+
+field-reset()
+  reset-space()
+  reset-font()
+  reset-theme()
+
+
+field-preset()
+  box bdbox
+  lh $field-lh
+  fz $field-fz
+  w 100%
+
+
+/// Includes all the styles.
+
+@require "styles/*"
